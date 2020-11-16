@@ -4,7 +4,7 @@ After=docker.service
 Requires=docker.service
 
 [Service]
-ExecStartPre=/usr/bin/docker run --rm -v /opt/bin:/opt/bin ibuildthecloud/systemd-docker
+ExecStartPre=/usr/bin/docker run --rm -v /opt/bin:/opt/bin etecs-ru/systemd-docker
 ExecStart=/opt/bin/systemd-docker run --rm --name %n nginx
 Restart=always
 RestartSec=10s
